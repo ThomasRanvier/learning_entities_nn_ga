@@ -1,4 +1,4 @@
-#learning_entities_nn_ga
+# learning_entities_nn_ga
 
 This is a project, there is simple entities, their goal is to collect the most foor as possible.
 
