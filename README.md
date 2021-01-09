@@ -1,13 +1,18 @@
 # learning_entities_nn_ga
 
 In this project simple entities are competing to collect as much food as possible.
+This project is quite old and my machine learning skills were basically non-existent, do not pay too much attention at the code.
 
-**Entities :**
-They are simple circles. They point in a direction, they got a field of view. The FOV is symbolized by 2 lines : red if it sees nothing, green otherwise.
-They are all controlled by their own neural network. There is one entrie: a float from the fov, and 2 outputs: to go forward and to rotate.
+On the top left are the current generation number, the current movement iteration, the amount of food that the best entity has collected and the total amount of food collected by the entire population.
+![learning entities](learning_entities.gif "learning entities")
 
-**Food :** 
-They are little points and are worth 1 point when eaten by an entity.
+**Entities:**
+They are simple circles. They got a field of view in front of them that gives them the distance to the closest food they can see.
+The FOV is symbolized by 2 lines : red if it detects no food, green otherwise.
+Each entity is controlled by its own neural network. The NN input is the FOV returned value and the output is a two values vector, the first sets the speed of the entity and the second its rotation.
 
-**Genetic algorithm :**
-The neural networks of the entities evolve thanks to a genetic algorithm, kinda using a NEAT approach.
+**Food:**
+They are little points and reward with one point the entity that eats it.
+
+**Genetic algorithm:**
+The weights and biases of the neural networks of the entities evolves thanks to a genetic algorithm, kinda using a NEAT approach.
